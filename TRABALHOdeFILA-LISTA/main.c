@@ -1,8 +1,9 @@
 #include "lista_dupla.h"
 
 
-int main(){
+int main(){ setlocale(LC_NUMERIC, "Portuguese_Brazil");
+ListaDupla *PLAYLIST = criar_lista();
 
-    printf("Hello world!\n");
 
+destruir_lista();
 return 0;}
