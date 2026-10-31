@@ -5,5 +5,5 @@ int main(){ setlocale(LC_ALL, "Portuguese_Brazil");
 ListaDupla *PLAYLIST = criar_lista();
 
 
-destruir_lista();
+destruir_lista(PLAYLIST);
 return 0;}
