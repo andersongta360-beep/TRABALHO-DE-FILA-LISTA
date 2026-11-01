@@ -19,6 +19,7 @@ NO *FIM;
 
 ListaDupla* criar_lista();
 void destruir_lista(ListaDupla *l);
+
 void inserir_inicio(ListaDupla *l, int id);
 void inserir_fim(ListaDupla *l, int id);
 int remover_item(ListaDupla *l, int id);
@@ -28,5 +29,9 @@ void imprimir_tras(ListaDupla *l);
 
 /**//**//**//**//**//**//**//**//**//**//**//**/
 int lerInteiro(void);
+void LIMPARTELA(void);
+void OLA(void);
+void COMECAR(void);
+void MENSSAGEM_ACAO(void);
 /**//**//**//**//**//**//**//**//**//**//**//**/
 #endif // LISTA_DUPLA_H_INCLUDED
