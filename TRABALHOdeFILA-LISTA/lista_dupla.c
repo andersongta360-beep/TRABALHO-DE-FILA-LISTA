@@ -46,7 +46,9 @@ void LIMPARTELA(void){
  system("clear");
 #endif
 }
-void OLA(void){
+void MENSSAGEM(int x){
+if(x == 1)
+{
 printf("\n\n\033[95m");
 printf("                                                            \n");
 printf("                                                            \n");
@@ -58,8 +60,11 @@ printf("                                                            \n");
 printf("                                                            \n");
 printf("                                                            \n\n\n");
 printf("  DIGITE \033[92m[1]\033[32m PARA COMEÇAR OU OUTRO NÚMERO \033[92m[X]\033[32m PARA SAIR\033[0m:  ");
+return;
 }
-void COMECAR(void){
+
+else if(x == 2)
+{
 printf("\n\n\033[95m");
 printf("                                                            \n");
 printf("                                                            \n");
@@ -68,8 +73,22 @@ printf("                V A M O S  L Á  E N T Ã O ! ! !             \n");
 printf("                                                            \n");
 printf("                                                            \n");
 printf("                                                            \n\n\n");
+return;
 }
-void MENSSAGEM_ACAO(void){
+else if(x == 3)
+{
+printf("\n\n\033[95m");
+printf("                                                            \n");
+printf("                                                            \n");
+printf("                                                            \n");
+printf("             T C H A U ,  A T É  A  P R Ó X I M A ! ! !      \n");
+printf("                                                            \n");
+printf("                                                            \n");
+printf("                                                            \n\n\n");
+return;
+}
+else if(x == 4)
+{
 printf("\n\033[32m  O QUE DESEJA:\n\n");
 printf("\033[92m  [1]ADICIONAR MÚSICA\n");
 printf("\033[92m  [2]EXIBIR PLAYLIST\n");
@@ -77,5 +96,10 @@ printf("\033[92m  [3]EXIBIR HISTORICO DA PLAYLIST\n");
 printf("\033[92m  [4]REMOVER MUSICA\n");
 printf("\033[92m  [5]SAIR\n\n");
 printf("\033[32m  [REPOSTA]\033[0m:  ");
+return;
+}
+
+
+
 }
 /**//**//**//**//**//**//**//**//**//**//**//**/

@@ -4,25 +4,20 @@
 int main(){
 setlocale(LC_ALL, "Portuguese_Brazil");
 LIMPARTELA();
-
-
-
-OLA();
+MENSSAGEM(1);
 int comeco = lerInteiro();
-if(comeco != 1){return -1;}
-COMECAR();
-
+if(comeco != 1){LIMPARTELA();MENSSAGEM(3);printf("\033[0m");return -1;}
+MENSSAGEM(2);
 
 
 ListaDupla *PLAYLIST = criar_lista();
-
+if(PLAYLIST == NULL){printf("ERRO DE ALOCAÇÃO NO INÍCIO");return-1;}
 
 
 int acao=0;
 printf("\n");
-
 do{
-MENSSAGEM_ACAO();
+MENSSAGEM(4);
 acao = lerInteiro();
   if(acao > 5 || acao <= 0){
         printf("\n\n\033[31m[--AÇÃO INEXISTENTE--]\033[0m\n\n");
@@ -45,12 +40,14 @@ acao = lerInteiro();
       {
         printf("\n\n\033[32m[DIGITE O ID DA MÚSICA QUE QUER RETIRAR]\033[0m:  ");
         int id = lerInteiro();
-        remover_item(PLAYLIST,id);
+        int resultado = remover_item(PLAYLIST,id);
+          if(resultado == 1){printf("\n\n\033[92mMÚSICA RETIRADA COM SUCESSO\033[0m\n\n");}
+            else if(resultado == 0){printf("\n\n\033[31mERRO AO RETIRAR MÚSICA\033[0m\n\n");}
       }
   }
 }while(acao != 5);
 
 
-printf("\033[0m");
+LIMPARTELA();MENSSAGEM(3);printf("\033[0m");
 destruir_lista(PLAYLIST);
 return 0;}

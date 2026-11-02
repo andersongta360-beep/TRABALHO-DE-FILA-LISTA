@@ -30,8 +30,6 @@ void imprimir_tras(ListaDupla *l);
 /**//**//**//**//**//**//**//**//**//**//**//**/
 int lerInteiro(void);
 void LIMPARTELA(void);
-void OLA(void);
-void COMECAR(void);
-void MENSSAGEM_ACAO(void);
+void MENSSAGEM(int x);
 /**//**//**//**//**//**//**//**//**//**//**//**/
 #endif // LISTA_DUPLA_H_INCLUDED
