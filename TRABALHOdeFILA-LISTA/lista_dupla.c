@@ -10,6 +10,7 @@ ListaDupla *temp = malloc(sizeof(ListaDupla));
 
 return temp;
 }
+
 void destruir_lista(ListaDupla *l){
 if (l == NULL) {return;}
 while(l->FIM != NULL){
@@ -21,8 +22,50 @@ free(l);
 }
 
 
-void inserir_inicio(ListaDupla *l, int id){}
-void inserir_fim(ListaDupla *l, int id){}
+void inserir_inicio(ListaDupla *l, int id){
+
+    if(l == NULL){
+        return;}
+
+    NO *novo = malloc(sizeof(NO));
+
+    if(novo == NULL){
+        return;}
+
+    novo->DADO = id;
+    novo->ANTERIOR = NULL;
+    novo->PROXIMO = l->INICIO;
+
+    if(l->INICIO == NULL){
+
+        l->FIM = novo;}
+    else{
+
+        l->INICIO->ANTERIOR = novo;}
+    l->INICIO = novo;}
+
+void inserir_fim(ListaDupla *l, int id){
+
+    if(l == NULL){
+        return;}
+
+    NO *novo = malloc(sizeof(NO));
+
+    if(novo == NULL){
+        return;}
+
+    novo->DADO = id;
+    novo->PROXIMO = NULL;
+    novo->ANTERIOR = l->FIM;
+
+    if(l->FIM == NULL){
+
+        l->INICIO = novo;}
+    else{
+
+        l->FIM->PROXIMO = novo;}
+    l->FIM = novo;}
+
 int remover_item(ListaDupla *l, int id){}
 void imprimir_frente(ListaDupla *l){}
 void imprimir_tras(ListaDupla *l){}
@@ -39,6 +82,7 @@ int lerInteiro(void) {
     while(getchar() != '\n');
     return valor;
 }
+
 void LIMPARTELA(void){
 #ifdef _WIN32
  system("cls");
@@ -54,12 +98,12 @@ printf("                                                            \n");
 printf("                                                            \n");
 printf("                                                            \n");
 printf("\033[95m");
-printf("              O L ¡ ,   V A M O S   C O M E « A R ?         \n");
+printf("              O L √Å ,   V A M O S   C O M E √á A R ?         \n");
 printf("\033[32m");
 printf("                                                            \n");
 printf("                                                            \n");
 printf("                                                            \n\n\n");
-printf("  DIGITE \033[92m[1]\033[32m PARA COME«AR OU OUTRO N⁄MERO \033[92m[X]\033[32m PARA SAIR\033[0m:  ");
+printf("  DIGITE \033[92m[1]\033[32m PARA COME√áAR OU OUTRO N√öMERO \033[92m[X]\033[32m PARA SAIR\033[0m:  ");
 return;
 }
 
@@ -69,7 +113,7 @@ printf("\n\n\033[95m");
 printf("                                                            \n");
 printf("                                                            \n");
 printf("                                                            \n");
-printf("                V A M O S  L ¡  E N T √ O ! ! !             \n");
+printf("                V A M O S  L √Å  E N T √É O ! ! !             \n");
 printf("                                                            \n");
 printf("                                                            \n");
 printf("                                                            \n\n\n");
@@ -81,7 +125,7 @@ printf("\n\n\033[95m");
 printf("                                                            \n");
 printf("                                                            \n");
 printf("                                                            \n");
-printf("             T C H A U ,  A T …  A  P R ” X I M A ! ! !      \n");
+printf("             T C H A U ,  A T √â  A  P R √ì X I M A ! ! !      \n");
 printf("                                                            \n");
 printf("                                                            \n");
 printf("                                                            \n\n\n");
@@ -90,7 +134,7 @@ return;
 else if(x == 4)
 {
 printf("\n\033[32m  O QUE DESEJA:\n\n");
-printf("\033[92m  [1]ADICIONAR M⁄SICA\n");
+printf("\033[92m  [1]ADICIONAR M√öSICA\n");
 printf("\033[92m  [2]EXIBIR PLAYLIST\n");
 printf("\033[92m  [3]EXIBIR HISTORICO DA PLAYLIST\n");
 printf("\033[92m  [4]REMOVER MUSICA\n");
