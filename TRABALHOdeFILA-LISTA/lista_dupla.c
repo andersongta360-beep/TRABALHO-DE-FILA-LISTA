@@ -77,11 +77,13 @@ if(aux->DADO == id){
     l->INICIO = aux->PROXIMO;
     l->INICIO->ANTERIOR = NULL;
     free(aux);
+    imprimir_frente(l);
     return 1;
   } else {
         l->INICIO = NULL;
         l->FIM = NULL;
         free(aux);
+        imprimir_frente(l);
         return 1;
       }
 } else {
@@ -92,11 +94,13 @@ if(aux->DADO == id){
       l->FIM = aux->ANTERIOR;
       l->FIM->PROXIMO = NULL;
       free(aux);
+      imprimir_frente(l);
       return 1;
     } else {
         l->INICIO = NULL;
         l->FIM = NULL;
         free(aux);
+        imprimir_frente(l);
         return 1;
       }
   } else {
@@ -112,6 +116,7 @@ if(aux->DADO == id){
       aux->PROXIMO->ANTERIOR = aux->ANTERIOR;
       aux->ANTERIOR->PROXIMO = aux->PROXIMO;
       free(aux);
+      imprimir_frente(l);
       return 1;
     }
   }
