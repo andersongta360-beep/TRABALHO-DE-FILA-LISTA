@@ -41,7 +41,7 @@ void inserir_inicio(ListaDupla *l, int id){
         l->INICIO->ANTERIOR = novo;
       }
         l->INICIO = novo;
-        printf("\033[92m  INSIRIDO(início) COM SUCESSO  \033[0m\n");
+        printf("\033[92m  INSERIDO(início) COM SUCESSO  \033[0m\n");
 }
 void inserir_fim(ListaDupla *l, int id){
 
@@ -224,9 +224,9 @@ return;
 else if(x == 4)
 {
 printf("\n\033[33m  O QUE DESEJA:\n\n");
-printf("\033[95m  [1]ADICIONAR MÚSICA\n");
+printf("\033[95m  [1]ADICIONAR MUSICA\n");
 printf("\033[95m  [2]EXIBIR PLAYLIST\n");
-printf("\033[95m  [3]EXIBIR HISTORICO DA PLAYLIST\n");
+printf("\033[95m  [3]EXIBIR PLAYLIST INVERSA (HISTORICO)\n");
 printf("\033[95m  [4]REMOVER MÚSICA\n");
 printf("\033[95m  [5]SAIR\n\n");
 printf("\033[33m  [REPOSTA]\033[0m:  ");

@@ -2,6 +2,7 @@
 
 
 int main(){
+system("chcp 65001 > nul");
 setlocale(LC_ALL, "Portuguese_Brazil.UTF-8");
 LIMPARTELA();
 MENSSAGEM(1);
@@ -21,8 +22,7 @@ MENSSAGEM(4);
 acao = lerInteiro();
   if(acao > 5 || acao <= 0){
         printf("\n\n\033[31m  AÇÃO INEXISTENTE  \033[0m\n\n");
-  }else{
-      if(acao == 1)
+  }else if(acao == 1)
       {
         printf("\n\n\033[33m  DIGITE O ID DA MUSICA QUE QUER ADICIONAR\033[0m:  ");
 
@@ -45,7 +45,7 @@ acao = lerInteiro();
           if(resultado == 1){printf("\033[92m  MUSICA RETIRADA COM SUCESSO  \033[0m\n\n");}
             else if(resultado == 0){printf("\033[31m  ERRO AO RETIRAR MUSICA  \033[0m\n\n");}
       }
-  }
+
 }while(acao != 5);
 
 
