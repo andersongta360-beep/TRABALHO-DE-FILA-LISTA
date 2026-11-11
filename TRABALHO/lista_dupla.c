@@ -64,7 +64,7 @@ void inserir_fim(ListaDupla *l, int id){
           l->FIM->PROXIMO = novo;
       }
     l->FIM = novo;
-    printf("\033[92m  INSIRIDO(fim) COM SUCESSO  \033[0m\n");
+    printf("\033[92m  INSERIDO(fim) COM SUCESSO  \033[0m\n");
 }
 int remover_item(ListaDupla *l, int id){
   if(l == NULL || l->INICIO == NULL){
@@ -224,10 +224,10 @@ return;
 else if(x == 4)
 {
 printf("\n\033[33m  O QUE DESEJA:\n\n");
-printf("\033[95m  [1]ADICIONAR MÚSICA\n");
+printf("\033[95m  [1]ADICIONAR MUSICA\n");
 printf("\033[95m  [2]EXIBIR PLAYLIST\n");
-printf("\033[95m  [3]EXIBIR HISTORICO DA PLAYLIST\n");
-printf("\033[95m  [4]REMOVER MÚSICA\n");
+printf("\033[95m  [3]EXIBIR HISTORICO DE MUSICAS ADICIONADAS NA PLAYLIST\n");
+printf("\033[95m  [4]REMOVER MUSICA\n");
 printf("\033[95m  [5]SAIR\n\n");
 printf("\033[33m  [REPOSTA]\033[0m:  ");
 return;
