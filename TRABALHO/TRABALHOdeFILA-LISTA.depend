@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1740933562 source:c:\users\user\desktop\projetos\repogit\trabalhodefila-lista\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1793404961 source:c:\users\user\desktop\projetos\repogit\trabalhodefila-lista\lista_dupla.c
+	"lista_dupla.h"
+
+1793405017 c:\users\user\desktop\projetos\repogit\trabalhodefila-lista\lista_dupla.h
+	<stdio.h>
+	<stdlib.h>
+
+1794025971 source:c:\users\user\desktop\projetos\repogit\trabalhodefila-lista\trabalhodefila-lista\lista_dupla.c
+	"lista_dupla.h"
+
+1793588145 c:\users\user\desktop\projetos\repogit\trabalhodefila-lista\trabalhodefila-lista\lista_dupla.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+
+1794025241 source:c:\users\user\desktop\projetos\repogit\trabalhodefila-lista\trabalhodefila-lista\main.c
+	"lista_dupla.h"
+
+1794435384 source:c:\users\user\desktop\projetos\repogit\trabalhodefila-lista\trabalho\lista_dupla.c
+	"lista_dupla.h"
+
+1793588145 c:\users\user\desktop\projetos\repogit\trabalhodefila-lista\trabalho\lista_dupla.h
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+
+1794435176 source:c:\users\user\desktop\projetos\repogit\trabalhodefila-lista\trabalho\main.c
+	"lista_dupla.h"
+
