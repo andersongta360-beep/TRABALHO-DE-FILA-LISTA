@@ -21,7 +21,7 @@ do{
 MENSSAGEM(4);
 acao = lerInteiro();
   if(acao > 5 || acao <= 0){
-        printf("\n\n\033[31m  AÇÃO INEXISTENTE  \033[0m\n\n");
+        printf("\n\n\033[31m  ACAO INEXISTENTE  \033[0m\n\n");
   }else if(acao == 1)
       {
         printf("\n\n\033[33m  DIGITE O ID DA MUSICA QUE QUER ADICIONAR\033[0m:  ");
