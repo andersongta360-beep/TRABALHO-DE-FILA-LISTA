@@ -66,61 +66,41 @@ void inserir_fim(ListaDupla *l, int id){
     l->FIM = novo;
     printf("\033[92m  INSERIDO(fim) COM SUCESSO  \033[0m\n");
 }
+
 int remover_item(ListaDupla *l, int id){
-  if(l == NULL || l->INICIO == NULL){
+     if(l == NULL || l->INICIO == NULL){
      return 0;
   }
 
-NO *aux = l->INICIO;
-if(aux->DADO == id){
-  if(aux->PROXIMO != NULL){
-    l->INICIO = aux->PROXIMO;
-    l->INICIO->ANTERIOR = NULL;
-    free(aux);
-    imprimir_frente(l);
-    return 1;
-  } else {
-        l->INICIO = NULL;
-        l->FIM = NULL;
-        free(aux);
-        imprimir_frente(l);
+    NO *aux = l->INICIO;
+
+    while (aux != NULL) {
+       if (aux->DADO == id) {
+            if (aux->ANTERIOR == NULL && aux->PROXIMO == NULL) {
+                l->INICIO = NULL;
+                l->FIM = NULL;
+                free(aux);
+            } else if (aux->PROXIMO == NULL){
+                aux->ANTERIOR->PROXIMO = NULL;
+                l->FIM = aux;
+                free(aux);
+            } else if (aux->ANTERIOR == NULL){
+                l->INICIO = aux->PROXIMO;
+                l->INICIO->ANTERIOR = NULL;
+                free(aux);
+            } else {
+
+                aux->ANTERIOR->PROXIMO = aux->PROXIMO;
+                aux->PROXIMO->ANTERIOR = aux->ANTERIOR;
+                free(aux);
+            }
         return 1;
-      }
-} else {
-
-  aux = l->FIM;
-  if(aux->DADO == id){
-      if(aux->ANTERIOR != NULL){
-      l->FIM = aux->ANTERIOR;
-      l->FIM->PROXIMO = NULL;
-      free(aux);
-      imprimir_frente(l);
-      return 1;
-    } else {
-        l->INICIO = NULL;
-        l->FIM = NULL;
-        free(aux);
-        imprimir_frente(l);
-        return 1;
-      }
-  } else {
-
-      while(aux != NULL && aux->DADO != id){
-        aux = aux->ANTERIOR;
-
-      }
-      if(aux == NULL){
-        return 0;
-      }
-
-      aux->PROXIMO->ANTERIOR = aux->ANTERIOR;
-      aux->ANTERIOR->PROXIMO = aux->PROXIMO;
-      free(aux);
-      imprimir_frente(l);
-      return 1;
     }
-  }
-}
+    aux = aux->PROXIMO;
+    }
+        return 0;
+    }
+
 void imprimir_frente(ListaDupla *l){
   if(l == NULL){
      return;
